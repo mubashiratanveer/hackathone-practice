@@ -1,21 +1,15 @@
-
-
-
-
-
-
-
 'use client'
 
 // components/ProductList.tsx
 import React from 'react';
 import { AiFillStar, AiOutlineShoppingCart } from 'react-icons/ai';
+import Image from 'next/image';
 
 const products = [
-  { id: 1, name: 'The north coat',  price: '$260', rating: 3, imgSrc: 'project pics/Best Selling Product1.png' },
-  { id: 2, name: 'Gucci duffel bag',  price: '$960', rating: 3, imgSrc: 'project pics/Best Selling Product2.png' },
-  { id: 3, name: 'RGB Liquid CPU cooler',  price: '$160', rating: 3, imgSrc: 'project pics/Best Selling Product3.png' },
-  { id: 4, name: 'Small Bookshelf',  price: '$360', rating: 3, imgSrc: 'project pics/Best Selling Product4.png' },
+  { id: 1, name: 'The north coat',  price: '$260', rating: 3, imgSrc: '/project pics/Best Selling Product1.png' },
+  { id: 2, name: 'Gucci duffel bag',  price: '$960', rating: 3, imgSrc: '/project pics/Best Selling Product2.png' },
+  { id: 3, name: 'RGB Liquid CPU cooler',  price: '$160', rating: 3, imgSrc: '/project pics/Best Selling Product3.png' },
+  { id: 4, name: 'Small Bookshelf',  price: '$360', rating: 3, imgSrc: '/project pics/Best Selling Product4.png' },
 ]
 
 export default function BestSellingProduct(){
@@ -46,7 +40,11 @@ export default function BestSellingProduct(){
                 onClick={() => handleAddToCart(product.id)}
                 className="w-full"
               >
-                <img src={product.imgSrc} alt={product.name} className="w-full h-48 object-cover rounded-t-lg" />
+                <Image 
+                src={product.imgSrc} 
+                alt={product.name} className="w-full h-48 object-cover rounded-t-lg" 
+                width={200}
+                height={200}/>
                 <div
                   className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >

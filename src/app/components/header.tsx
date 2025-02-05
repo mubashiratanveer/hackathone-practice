@@ -1,8 +1,11 @@
 "use client";
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+
+
 import Link from "next/link";
 import { IoReorderThree } from "react-icons/io5";
 import { useState } from "react";
-Link;
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {

@@ -7,7 +7,7 @@ import ExploreProductList from "../components/exploreOurProducts";
 import Banner from "../Banner/page";
 import FeatureSection from "../components/featuresSec";
 import SecLastBottom from "../components/secondLastBottom";
-
+import Image from "next/image";
 import { FaApple } from "react-icons/fa";
 
 
@@ -36,7 +36,12 @@ export default  function HeroSection(){
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img className="object-cover object-center rounded" alt="hero" src="hero section .png"/>
+          <Image 
+          className="object-cover object-center rounded" 
+          alt="hero" 
+          src="/hero section .png"
+          width={200}
+            height={200}/>
         </div>
       </div>
     </section>
@@ -44,7 +49,11 @@ export default  function HeroSection(){
 {/* next part*/}
     <div>
           <div className="mt-5 mb-5">
-          <img src="project pics/flash sale.png" alt="" />
+          <Image 
+          src="/project pics/flash sale.png" 
+          alt="product image" 
+          width={200}
+            height={200}/>
           </div>
       </div>
              

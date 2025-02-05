@@ -2,7 +2,7 @@
 
 // components/Banner.tsx
 import React from 'react';
-
+import Image from 'next/image';
 export default function Banner(){
   return (
     <div className="flex flex-col md:flex-row bg-black p-12 rounded-lg shadow-lg ml-7 mr-7 mb-7 ">
@@ -32,7 +32,12 @@ export default function Banner(){
         <button className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300">Buy Now</button>
       </div>
       <div className="md:w-1/2">
-        <img src="project pics/Banner .png " alt="Banner " className="w-full h-full object-cover rounded-lg"/>
+        <Image 
+        src="/project pics/Banner.png" 
+        alt="Banner " 
+        className="w-full h-full object-cover rounded-lg"
+        width={200}
+        height={200}/>
       </div>
     </div>
   );

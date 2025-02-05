@@ -3,16 +3,17 @@
 'use client'
 import React, { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
+import Image from 'next/image';
 
 const products = [
-  { id: 1, name: 'Bready dry dog food',price: '$100',imgSrc: 'project pics/explore product 1.png', rating: 3 },
-  { id: 2, name: 'Canon EOS DSLR camera',price: '$360', imgSrc: 'project pics/explore product 2.png', rating: 3 }, 
-  { id: 3, name: 'ESUS FHD Gaming Laptop',price: '$700',  imgSrc: 'project pics/explore product 3.png', rating: 3 },
-  { id: 4, name: 'Curology Product Set',price: '$500',  imgSrc: 'project pics/explore product 4.jpeg', rating: 3 },
-  { id: 5, name: 'Kids Electric Car',price: '$960',  imgSrc: 'project pics/explore product 5.png', rating: 3 },
-  { id: 6, name: 'Jr.Zoom Soccer Cleats',price: '$1160',  imgSrc: 'project pics/explore product 6.png', rating: 3 },
-  { id: 7, name: 'GP11 Shooter USB gamepad',price: '$660',  imgSrc: 'project pics/explore product 7.png', rating: 3 },
-  { id: 8, name: 'Quailted Sstin Jacket',price: '$660',  imgSrc: 'project pics/explore product 8.png', rating: 3 },
+  { id: 1, name: 'Bready dry dog food',price: '$100',imgSrc: '/project pics/explore product 1.png', rating: 3 },
+  { id: 2, name: 'Canon EOS DSLR camera',price: '$360', imgSrc: '/project pics/explore product 2.png', rating: 3 }, 
+  { id: 3, name: 'ESUS FHD Gaming Laptop',price: '$700',  imgSrc: '/project pics/explore product 3.png', rating: 3 },
+  { id: 4, name: 'Curology Product Set',price: '$500',  imgSrc: '/project pics/explore product 4.jpeg', rating: 3 },
+  { id: 5, name: 'Kids Electric Car',price: '$960',  imgSrc: '/project pics/explore product 5.png', rating: 3 },
+  { id: 6, name: 'Jr.Zoom Soccer Cleats',price: '$1160',  imgSrc: '/project pics/explore product 6.png', rating: 3 },
+  { id: 7, name: 'GP11 Shooter USB gamepad',price: '$660',  imgSrc: '/project pics/explore product 7.png', rating: 3 },
+  { id: 8, name: 'Quailted Sstin Jacket',price: '$660',  imgSrc: '/project pics/explore product 8.png', rating: 3 },
 ];
 
 export default function ExploreProductList(){
@@ -36,7 +37,12 @@ export default function ExploreProductList(){
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {products.slice(0, showAll ? products.length : 4).map((product) => (
           <div key={product.id} className="bg-white p-6 rounded-lg shadow-lg">
-            <img src={product.imgSrc} alt={product.name} className="w-full h-40 object-cover rounded-lg mb-4" />
+            <Image
+             src={product.imgSrc} 
+             alt={product.name}
+              className="w-full h-40 object-cover rounded-lg mb-4"
+              width={200}
+              height={200} />
             <h3 className="text-sm font-semibold ">{product.name}</h3>
             <p className="text-sm text-red-500 mb-2">{product.price}</p>
             <div className="flex items-center mb-4">

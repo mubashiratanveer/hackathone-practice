@@ -4,7 +4,7 @@ import { CiDollar } from "react-icons/ci";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { FaHandHoldingDollar } from "react-icons/fa6";
 import SecLastBottom from "../components/secondLastBottom";
-
+import Image from "next/image";
 ;
 
 
@@ -29,10 +29,12 @@ export default function About() {
           </p>
         </div>
         <div className="md:text-right max-md:mt-12 p-8">
-          <img
-            src="project pics/Side Image.png"
+          <Image
+            src="/project pics/Side Image.png"
             alt="Side img"
             className="w-full h-full object-cover"
+            width={200}
+            height={200}
           />
         </div>
       </div>
@@ -92,9 +94,12 @@ export default function About() {
             className="bg-gray-100 relative rounded transition-transform
                   duration-300 ease-in-out transform hover:scale-105 "
           >
-            <img
-              src="project pics/team pic1.png"
+            <Image
+              src="/project pics/team pic1.png"
+              alt="project pic"
               className="w-5xl h-5xl inline-block -mt-12 "
+              width={200}
+              height={200}
             />
 
             <div className="py-4 ">
@@ -160,9 +165,12 @@ export default function About() {
             className="bg-gray-100 relative rounded transition-transform
                   duration-300 ease-in-out transform hover:scale-105"
           >
-            <img
-              src="project pics/team pic2.png"
+            <Image
+              src="/project pics/team pic2.png"
+              alt="image"
               className="w-5xl h-5xl inline-block -mt-12"
+              width={200}
+              height={200}
             />
 
             <div className="py-4">
@@ -228,9 +236,12 @@ export default function About() {
             className="bg-gray-100 relative rounded  transition-transform 
                   duration-300 ease-in-out transform  hover:scale-105 "
           >
-            <img
-              src="project pics/team pic3.png"
+            <Image
+              src="/project pics/team pic3.png"
+              alt="image"
               className="w-3xl h-3xl inline-block -mt-12"
+              width={200}
+              height={200}
             />
 
             <div className="py-4">

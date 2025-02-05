@@ -1,15 +1,18 @@
 
 'use client'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 
 // components/ProductList.tsx
 import React from 'react';
 import { AiFillStar, AiOutlineShoppingCart } from 'react-icons/ai';
+import Image from 'next/image';
 
 const products = [
-  { id: 1, name: 'HAVIT HV-G92 Gamepad',  price: '$120', rating: 3, imgSrc: 'project pics/product 1.png' },
-  { id: 2, name: 'Ak-900 Wired Key board',  price: '$960', rating: 3, imgSrc: 'project pics/product 2.png' },
-  { id: 3, name: 'IPS LCD Gaming Monitor',  price: '$370', rating: 3, imgSrc: 'project pics/product 3.png' },
-  { id: 4, name: 'S-Series Comfort Chair',  price: '$375', rating: 3, imgSrc: 'project pics/product 4.png' },
+  { id: 1, name: 'HAVIT HV-G92 Gamepad',  price: '$120', rating: 3, imgSrc: '/project pics/product 1.png' },
+  { id: 2, name: 'Ak-900 Wired Key board',  price: '$960', rating: 3, imgSrc: '/project pics/product 2.png' },
+  { id: 3, name: 'IPS LCD Gaming Monitor',  price: '$370', rating: 3, imgSrc: '/project pics/product 3.png' },
+  { id: 4, name: 'S-Series Comfort Chair',  price: '$375', rating: 3, imgSrc: '/project pics/product 4.png' },
 ]
 
 export default function ProductList(){
@@ -28,7 +31,12 @@ export default function ProductList(){
                 onClick={() => handleAddToCart(product.id)}
                 className="w-full"
               >
-                <img src={product.imgSrc} alt={product.name} className="w-full h-48 object-cover rounded-t-lg" />
+                <Image
+                 src={product.imgSrc}
+                  alt={product.name}
+                   className="w-full h-48 object-cover rounded-t-lg" 
+                   width={200}
+            height={200}/>
                 <div
                   className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >

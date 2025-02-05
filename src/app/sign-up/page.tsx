@@ -1,11 +1,16 @@
-
+import Image from "next/image"
 
 export default function SignUp() {
     return (
       <div className="font-[sans-serif]">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 items-center gap-4">
           <div className="max-md:order-1  mt-9 mb-9">
-            <img src="project pics/signUp img.png" className="w-full h-full object-cover" alt="login-image" />
+            <Image
+             src="/project pics/signUp img.png" 
+             className="w-full h-full object-cover"
+              alt="login-image"
+              width={200}
+            height={200} />
           </div>
   
           <form className="max-w-xl w-full p-6 mx-auto">
